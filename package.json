@@ -1,0 +1,19 @@
+{
+  "name": "money",
+  "version": "1.0.0",
+  "description": "Applied learning from kent beck TDD book",
+  "main": "index.js",
+  "author": "Augusto Sandim <augustosandim@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "^27.4.5"
+  },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/src/**/*.test.js"
+    ]
+  }
+}
