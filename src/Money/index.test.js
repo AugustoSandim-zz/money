@@ -19,6 +19,8 @@
  *  Arredondamento de dinheiro?
  *  equals()
  *  hashCode()
+ *  Igualdade de null
+ *  Igualdade de objeto
  */
 
 const Dollar = require("./index");
@@ -27,7 +29,7 @@ describe("Money", () => {
   it("Should be multiplication", () => {
     const five = new Dollar(5);
     let product = five.times(2);
-    expect(product.amount).toEqual(10);
+    expect(new Dollar(10)).toEqual(product);
     product = five.times(3);
     expect(product.amount).toEqual(15);
   });
