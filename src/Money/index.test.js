@@ -15,8 +15,10 @@
 /**  $5 + 10 CHF = $10 se a taxa é 2:1
  *  $5 * 2 = $10 | CHECKED
  *  Tornar “quantidade” privada
- *  Efeitos colaterais em Dollar?
+ *  Efeitos colaterais em Dollar? | CHECKED
  *  Arredondamento de dinheiro?
+ *  equals()
+ *  hashCode()
  */
 
 const Dollar = require("./index");
@@ -28,5 +30,13 @@ describe("Money", () => {
     expect(product.amount).toEqual(10);
     product = five.times(3);
     expect(product.amount).toEqual(15);
+  });
+
+  it("Should be equality", () => {
+    const five = new Dollar(5);
+    const six = new Dollar(6);
+    const anotherFive = new Dollar(5);
+    expect(five.equals(anotherFive)).toBeTruthy();
+    expect(five.equals(six)).toBeFalsy();
   });
 });
