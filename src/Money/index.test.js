@@ -23,9 +23,9 @@ const Dollar = require("./index");
 
 describe("Money", () => {
   it("Should be multiplication", () => {
-    let five = new Dollar(5);
+    const five = new Dollar(5);
     let product = five.times(2);
-    expect(five.amount).toEqual(10);
+    expect(product.amount).toEqual(10);
     product = five.times(3);
     expect(product.amount).toEqual(15);
   });
