@@ -31,7 +31,7 @@ describe("Money", () => {
     let product = five.times(2);
     expect(new Dollar(10)).toEqual(product);
     product = five.times(3);
-    expect(product.amount).toEqual(15);
+    expect(new Dollar(15)).toEqual(product);
   });
 
   it("Should be equality", () => {
