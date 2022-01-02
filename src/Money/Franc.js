@@ -1,16 +1,12 @@
-class Franc {
-  #amount; // private instance variable
-
+const Money = require("./index");
+class Franc extends Money {
   constructor(amount) {
-    this.#amount = amount;
+    super();
+    this._amount = amount;
   }
 
   times(multiplier) {
-    return new Franc(this.#amount * multiplier);
-  }
-
-  equals(object) {
-    return object instanceof Franc && this.#amount === object.#amount;
+    return new Franc(this._amount * multiplier);
   }
 }
 

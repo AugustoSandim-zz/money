@@ -1,16 +1,12 @@
-class Dollar {
-  #amount; // private instance variable
-
+const Money = require("./index");
+class Dollar extends Money {
   constructor(amount) {
-    this.#amount = amount;
+    super();
+    this._amount = amount;
   }
 
   times(multiplier) {
-    return new Dollar(this.#amount * multiplier);
-  }
-
-  equals(object) {
-    return object instanceof Dollar && this.#amount === object.#amount;
+    return new Dollar(this._amount * multiplier);
   }
 }
 
