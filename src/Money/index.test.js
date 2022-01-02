@@ -14,19 +14,24 @@
 
 /**  $5 + 10 CHF = $10 se a taxa é 2:1
  *  $5 * 2 = $10 | CHECKED
- *  Tornar “quantidade” privada
+ *  Tornar “quantidade” privada | CHECKED
  *  Efeitos colaterais em Dollar? | CHECKED
  *  Arredondamento de dinheiro?
- *  equals()
+ *  equals() | CHECKED
  *  hashCode()
  *  Igualdade de null
  *  Igualdade de objeto
+ *  5 CHF * 2 = 10 CHF | CHECKED
+ *  Duplicação de Dólar/Franco
+ *  Igualdade comum
+ *  Multiplicação comum
  */
 
-const Dollar = require("./index");
+const Dollar = require("./Dollar");
+const Franc = require("./Franc");
 
 describe("Money", () => {
-  it("Should be multiplication", () => {
+  it("Should be Dollar multiplication", () => {
     const five = new Dollar(5);
     expect(new Dollar(10)).toEqual(five.times(2));
     expect(new Dollar(15)).toEqual(five.times(3));
@@ -38,5 +43,11 @@ describe("Money", () => {
     const anotherFive = new Dollar(5);
     expect(five.equals(anotherFive)).toBeTruthy();
     expect(five.equals(six)).toBeFalsy();
+  });
+
+  it("Should be Franc multiplication", () => {
+    const five = new Franc(5);
+    expect(new Franc(10)).toEqual(five.times(2));
+    expect(new Franc(15)).toEqual(five.times(3));
   });
 });
