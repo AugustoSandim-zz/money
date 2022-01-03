@@ -23,8 +23,9 @@
  *  Igualdade de objeto
  *  5 CHF * 2 = 10 CHF | CHECKED
  *  Duplicação de Dólar/Franco
- *  Igualdade comum
+ *  Igualdade comum | CHECKED
  *  Multiplicação comum
+ *  Comparar Francos com Dólares
  */
 
 const Dollar = require("./Dollar");
@@ -38,11 +39,10 @@ describe("Money", () => {
   });
 
   it("Should be equality", () => {
-    const five = new Dollar(5);
-    const six = new Dollar(6);
-    const anotherFive = new Dollar(5);
-    expect(five.equals(anotherFive)).toBeTruthy();
-    expect(five.equals(six)).toBeFalsy();
+    expect(new Dollar(5).equals(new Dollar(5))).toBeTruthy();
+    expect(new Dollar(5).equals(new Dollar(6))).toBeFalsy();
+    expect(new Franc(5).equals(new Franc(5))).toBeTruthy();
+    expect(new Franc(5).equals(new Franc(6))).toBeFalsy();
   });
 
   it("Should be Franc multiplication", () => {
