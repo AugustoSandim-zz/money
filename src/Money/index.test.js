@@ -12,20 +12,23 @@
  * 5. Refatore para remover duplicação
  */
 
-/**  $5 + 10 CHF = $10 se a taxa é 2:1
- *  $5 * 2 = $10 | CHECKED
- *  Tornar “quantidade” privada | CHECKED
- *  Efeitos colaterais em Dollar? | CHECKED
- *  Arredondamento de dinheiro?
- *  equals() | CHECKED
- *  hashCode()
- *  Igualdade de null
- *  Igualdade de objeto
- *  5 CHF * 2 = 10 CHF | CHECKED
- *  Duplicação de Dólar/Franco
- *  Igualdade comum | CHECKED
- *  Multiplicação comum
- *  Comparar Francos com Dólares
+/**
+ * @TODO:
+ * $5 + 10 CHF = $10 se a taxa é 2:1
+ * $5 * 2 = $10
+ * [x] - Tornar “quantidade” privada
+ * [x] - Efeitos colaterais em Dollar?
+ * - Arredondamento de dinheiro?
+ * [x] - equals()
+ * - hashCode()
+ * - Igualdade de null
+ * - Igualdade de objeto
+ * [x] - 5 CHF * 2 = 10 CHF
+ * - Duplicação de Dólar/Franco
+ * - Igualdade comum
+ * - Multiplicação comum
+ * [x] - Comparar Francos com Dólares
+ * - Moeda?
  */
 
 const Dollar = require("./Dollar");
