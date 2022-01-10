@@ -31,12 +31,14 @@
  * - Moeda?
  */
 
-const Dollar = require("./Dollar");
-const Franc = require("./Franc");
+import Dollar from "./Dollar"
+import Franc from "./Franc"
+import Money from "./"
 
 describe("Money", () => {
   it("Should be Dollar multiplication", () => {
-    const five = new Dollar(5);
+    const money = new Money();
+    const five = money.dollar(5);
     expect(new Dollar(10)).toEqual(five.times(2));
     expect(new Dollar(15)).toEqual(five.times(3));
   });
