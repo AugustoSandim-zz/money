@@ -1,6 +1,6 @@
 const Dollar = require("./Dollar");
 class Money {
-  private amount;
+  protected amount;
 
   equals(object) {
     return (
@@ -10,9 +10,9 @@ class Money {
     );
   }
 
-  dollar(amount) {
-    return new Dollar(5);
-  }
+  // dollar(amount) {
+  //   return new Dollar(5);
+  // }
 }
 
 export default Money;

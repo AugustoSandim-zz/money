@@ -37,8 +37,7 @@ import Money from "./"
 
 describe("Money", () => {
   it("Should be Dollar multiplication", () => {
-    const money = new Money();
-    const five = money.dollar(5);
+    const five = new Dollar(5);
     expect(new Dollar(10)).toEqual(five.times(2));
     expect(new Dollar(15)).toEqual(five.times(3));
   });
