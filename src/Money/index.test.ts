@@ -33,7 +33,7 @@
 
 import Dollar from "./Dollar"
 import Franc from "./Franc"
-import Money from "./"
+// import Money from "./"
 
 describe("Money", () => {
   it("Should be Dollar multiplication", () => {
